@@ -1,7 +1,13 @@
+using VehicleRentalPro.Repository.Implementation;
+using VehicleRentalPro.Repository.Interfaces;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+//Interface ve implementasyonlarin calisma esnasinda cagirilmasi
+builder.Services.AddScoped<IVehicleRepository, VehicleRepository>();
+builder.Services.AddAutoMapper(typeof(VehicleRepository));//NugetPackage den AutoMapper, AutoMapperDependencyInjetion kurultuktan sonra
 
 var app = builder.Build();
 
