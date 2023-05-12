@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using VehicleRentalPro.Models;
+using VehicleRentalPro.Models.ViewModel.Vehicle;
 
 namespace VehicleRentalPro.Mapper
 {
@@ -6,7 +8,7 @@ namespace VehicleRentalPro.Mapper
 	{//Profile AutoMapper 
         public VehicleProfile()
         {
-           // CreateMap<source, destination>();
+            CreateMap<Vehicle,VehicleViewModel>();
         }
     }
 }
